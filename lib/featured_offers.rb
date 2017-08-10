@@ -1,5 +1,8 @@
-require "featured_offers/version"
+require 'httparty'
+require 'pry'
+require 'nokogiri'
 
-module FeaturedOffers
-  # Your code goes here...
-end
+
+require_relative "featured_offers/version"
+require_relative "featured_offers/cli"
+require_relative "featured_offers/featured"
