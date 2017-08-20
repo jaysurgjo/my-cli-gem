@@ -1,0 +1,1 @@
+X Have a CLI for interfacing with the application - This gem runs on the command line. X Pull data from an external source - This gem scrape data from Meh.com X Implement both list and detail views - This gem list the deal of the day on the website.
