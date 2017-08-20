@@ -19,7 +19,7 @@ end
 
   def choice
     input = gets.strip
-      puts "This is a great product. Youll love it. Thank you for shopping with us!"
+      puts "This is a great product. You'll love it. Thank you for shopping with us!"
     end
 
   def bye
