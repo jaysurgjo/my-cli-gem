@@ -7,19 +7,22 @@ class FeaturedOffers::CLI
   end
 
   def self.scrape_deals
+    page = Nokogiri::HTML(open("https://dealnews.com/"))
     deals = []
-    deals << self.scrape_name
+    counter = 0
+    while counter < 50
+    deals << self.scrape_name(counter, page)
+    counter += 1
+  end
     deals
   end
 
-  def self.scrape_name
-    page = Nokogiri::HTML(open("https://meh.com"))
-
+  def self.scrape_name(counter, page)
     deal = self.new
-    deal.name = page.css("h2.main-title").text.strip
-    deal.description = page.css("section.features").text.strip
+    #binding.pry
+    deal.name = page.css("h3 a")[counter].text.strip
+    deal.description = page.css(".content-details")[counter].text.strip
     #binding.pry
     deal
   end
-
 end
